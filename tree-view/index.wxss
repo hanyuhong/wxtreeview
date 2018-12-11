@@ -1,0 +1,68 @@
+/* components/path-view/path-view.wxss */
+@import "weui.wxss";
+
+.hover{
+	background-color: #dddddd;
+}
+.box{
+	height: 120rpx;
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center
+	}
+.box__bd {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1
+}
+
+.box__ft {
+	text-align: right;
+	color: #999
+}
+
+.weui-cell-third{
+  background: #fff;
+}
+.weui-cell-list{
+  background: #fff;
+  margin: 5px 50px 5px 50px;
+}
+.weui-cell-line{
+/* width: 100px; */
+	margin-left: 5px;
+  border-left: 1px solid #ddd;
+  height: 100px; 
+  background: #fff
+}
+.weui-cell-circle{
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 10px;
+  height: 10px;
+  border-color: blue;
+}
+.weui-cell-time{
+  /* width: 50px; */
+  float: left;
+  font-size:14px;
+  padding-left: 15px;
+  width: 100%;
+	font-weight: 600;
+ 
+}
+.weui-cell-event{
+
+  padding-top: 35px;
+  padding-left: 20px;
+}
+.weui-cell-name{
+	font-size:14px;
+	height:23px;
+	margin-left: 15px;
+ 
+}

@@ -1,0 +1,41 @@
+<!--components/path-view/path-view.wxml-->
+
+<view class="weui-cell" style="border-width: 1rpx 1rpx 0 0;	border-color: #c8c8cd;overflow: hidden;	border-style: solid;height: 60rpx;margin-left: {{(level - 1 )*60}}rpx;"
+ hover-class="hover" bindtap="click" data-dptId="{{dptId}}" data-txt="{{text}}">
+	<view class="weui-cell__hd ">
+	</view>
+	<view class="weui-cell__bd" style="margin-right: 5px;vertical-align:middle">
+		<image src="icon/{{iconCls?iconCls:(isExpend?'folder1':'folder')}}.png" style="margin-right: 5px;vertical-align: middle ;width:20px; height: 20px;"></image>
+		{{text}}
+	</view>
+</view>
+	<block wx:if="{{ isParent && isExpend  }}">
+		<block wx:for="{{children}}" wx:key="{{dptId}}">
+			<tree-view text="{{item.text}}" level="{{level+1}}" 
+			dptId="{{item.id}}" 
+			children="{{item.children}}" 
+			isParent="{{item.isParent}}"
+			expendLevel="{{expendLevel}}" isExpend="{{level<expendLevel}}" iconCls="{{item.iconCls}}"></tree-view>
+		</block>
+	</block>
+
+
+
+<!-- <view class="box">
+	<view class="box__hd">
+		┣━
+	</view>
+	<view class="box__bd">{{text}}</view>
+	<view class="box__ft">{{level}}</view>
+</view>
+<block wx:if="{{ children.length >0}}">
+	<view class="box" wx:for="{{children}}" wx:for-item="cell">
+		<view class="box__hd">
+			┃
+		</view>
+		<view class="box__bd">
+			<tree-view text="{{cell.text}}" level="{{cell.level}}" children="{{cell.children}}"></tree-view>
+		</view>
+
+	</view>
+</block> -->
